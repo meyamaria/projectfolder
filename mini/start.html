@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Remove the automatic redirect -->
+    <!-- <meta http-equiv="refresh" content="0; url=http://localhost:5173/"> -->
+    <title>LEGALEASE</title>
+    <link rel="stylesheet" type="text/css" href="./start.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <input type="checkbox" id="check">
+            <label for="check" class="check_btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="legalease logo" style="height:50px; margin-right:10px;">
+                <label class="logo">LEGALEASE</label>
+            </div>
+            <ul>
+                <li><a href="#" onclick="openModal('homeModal')">Home</a></li>
+                <li><a href="#" onclick="openModal('aboutModal')">About</a></li>
+                <li><a href="#" onclick="openModal('contactModal')">Contact</a></li>
+                <li><button class="btnLogin-popup">Login/Signup</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="cover_box">
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+
+        <!-- Login Form -->
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" id="loginEmail" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" id="loginPassword" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form-box register">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <input type="text" id="registerUsername" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" id="registerEmail" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" id="registerPassword" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Agree to terms and conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>   
+    </div>
+
+    <div id="homeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('homeModal')">&times;</span>
+            
+            <div class="home-main">
+                <img src="home.png" alt="Home Image">
+                <div class="home-main-text">
+                    <h2>The Best Lawyer is a Good Listener</h2>
+                    <p>A wonderful lawyer is one who pays close attention to what you have to say, comprehends your worries, and offers practical legal solutions. You are not pressured to purchase our services. For this reason, we offer free legal consultations. AI legal experts concentrate on hearing their clients’ complaints, uncertainties, or misunderstandings and offering the best possible solutions. A lawyer will listen to the information presented and then walk you through the most practical solutions. You can choose whether or not to use LegalEase to find a solution to any of your queries.</p>
+                </div>
+            </div>
+
+            <div class="home-secondary">
+                <h3>Who are We?</h3>
+                <p>LegalEase is an Indian law firm having its registered office in Kerala. The law firm provides easy access to lawyers across India, with services designed to fit every budget. Even if you need free legal advice online, AI Legal Experts also provide lawyer consultation through our website. Whether you need a lawyer for property damage or physical injury, we help you interact with expert AI lawyers who offer solutions to meet your needs. With Online Legal Experts, legal guidance is just a click away.</p>
+            </div>
+            
+            <button onclick="openModal('disclaimerModal')" class="btn">Read Disclaimer</button>
+        </div>
+    </div>
+
+    <div id="disclaimerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('disclaimerModal')">&times;</span>
+            <h2>DISCLAIMER:</h2>
+            <p>
+                The rules of the Bar Council of India prohibit law firms from soliciting work 
+                or advertising in any manner. By clicking "I AGREE", the user acknowledges that:
+            </p>
+            <ul>
+                <li>The user wishes to gain more information about LegalEase and its attorneys.</li>
+                <li>The information is provided on the user's specific request.</li>
+                <li>Any material obtained is not intended to create a lawyer-client relationship.</li>
+                <li>No content here is legal advice; users must seek independent counsel.</li>
+            </ul>
+            <button class="agree-btn" onclick="closeModal('disclaimerModal')">I Agree</button>
+        </div>
+    </div>
+
+    <!-- About Us Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+            <h2>About LegalEase</h2>
+        <p>
+            LegalEase is your AI-powered legal companion, simplifying complex legal jargon into clear, actionable insights. 
+            Whether you're navigating IPC laws, drafting contracts, or seeking quick legal guidance, our intelligent system 
+            is here to help—anytime, anywhere.
+        </p>
+        <h3>Why LegalEase?</h3>
+        <p>
+            Powered by cutting-edge NLP, LegalEase understands legal queries in English and Malayalam, offering instant 
+            answers with precision. Say goodbye to legal confusion and hello to clarity, all at your fingertips.
+        </p>
+        <h3>Our Mission</h3>
+        <p>
+            To bridge the gap between law and accessibility, ensuring justice isn’t just a privilege but a right for all. 
+            We believe legal help should be fast, easy, and free from complexity.
+        </p>
+        </div>
+    </div>
+
+    <!-- Contact Us Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('contactModal')">&times;</span>
+            <h2>Our Lawyers</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="meya.jpg" alt="Team Member 1">
+                <h3>Meya Maria Tony</h3>
+                <p>Cooperate Lawyer</p>
+                <p>Email: meyatony27@gmail.com</p>
+            </div>
+            <div class="team-member">
+                <img src="gopz.jpg" alt="Team Member 2">
+                <h3>Gopika Shaju</h3>
+                <p>Tax Lawyer</p>
+                <p>Email: gopikashaju@gmail.com</p>
+            </div>
+            <div class="team-member">
+                <img src="sreeya.jpg" alt="Team Member 3">
+                <h3>Sreeya Menon P T</h3>
+                <p>Family Lawyer</p>
+                <p>Email: sree@gmail.com</p>
+            </div>
+            <div class="team-member">
+                <img src="sruthy.jpg" alt="Team Member 4">
+                <h3>Sruthy Ravi</h3>
+                <p>Criminal Lawyer</p>
+                <p>Email: sruthyravi80@gmail.com</p>
+            </div>
+        </div>
+        </div>
+    </div>  
+
+    <div class="footer">
+        <footer>
+            <div class="footer-container">
+                <p>&copy; LegalEase. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/_legal_ease_/" target="_blank">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<script src="start.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

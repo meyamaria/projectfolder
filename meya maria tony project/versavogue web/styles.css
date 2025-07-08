@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero.jpg') no-repeat center center;
+    background-size: cover;
+    color: rgb(115, 109, 109);
+    padding: 200px 0;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 10px 0 30px;
+}
+
+/* Product Section */
+.product-section {
+    background-color: #e8f4fa;
+    padding: 50px 0;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #333;
+}
+
+.section-description {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Features Section */
+.features-section {
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+.feature-title {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-description {
+    color: #666;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}

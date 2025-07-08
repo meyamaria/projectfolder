@@ -1,0 +1,4 @@
+.venv
+mpenv
+backend/__pycache__
+backend/audios/
