@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meya Maria Tony - Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Modular Styles -->
+    <link rel="stylesheet" href="styles/cursor.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    
+    <!-- Scripts -->
+    <script src="scripts/loading.js" defer></script>
+    <script src="scripts/cursor.js" defer></script>
+    <script src="scripts/particles.js" defer></script>
+    <script src="scripts/projectHover.js" defer></script>
+    <script src="scripts/scrollAnimations.js" defer></script>
+    <script src="scripts/keyboardNav.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="profile-pic">MT</div>
+        <div class="nav-menu">
+            <button class="nav-btn active" onclick="scrollToSection('home')">HOME</button>
+            <button class="nav-btn" onclick="scrollToSection('about')">ABOUT</button>
+            <button class="nav-btn" onclick="scrollToSection('projects')">PROJECTS</button>
+            <button class="nav-btn" onclick="scrollToSection('contact')">CONTACT</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section section">
+        <div class="hero-content">
+            <h1>Hello! I am <strong>Meya Maria Tony</strong></h1>
+            <h2>COMPUTER SCIENCE ASPIRANT</h2>
+            <p>
+                Enjoy building thoughtful, user-friendly (and sometimes just plain cute)
+                tech. From web development and UI/UX design to machine learning, I love
+                the satisfaction of bringing an idea to life.
+            </p>
+            <p class="spoiler-text">
+                Spoiler: I sometimes make random, adorable websites that serve no
+                purpose other than making me smile. Not everything needs to be socially
+                relevant... right?
+            </p>
+        </div>
+        <div class="hero-image">
+            <div class="profile-container">
+                <div class="bubble-wrapper">
+                    <img src="assets/your-image.jpg" alt="Profile Picture" class="profile-img">
+                    <div class="bubbles">
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section">
+        <h2 class="about-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a tech enthusiast currently pursuing my B.Tech at Toc H Institute of Science and Technology — where I juggle between web development, ML, and UI/UX design.</p>
+                <p>My passion lies in creating interesting, user-friendly tech solutions. Whether it's crafting elegant websites, designing intuitive interfaces, or exploring amusing tech sites, I find tinkering with a variety of stuff enjoyable.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters">
+            <button class="filter-btn active" onclick="filterProjects('web', event)">Web</button>
+            <button class="filter-btn" onclick="filterProjects('uiux', event)">UI/UX</button>
+        </div>
+
+        <div class="projects-container">
+
+            <!-- project details -->
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="VersaVogue Project" data-hover="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80">
+                    <div class="project-overlay">
+                        <div class="project-tech-stack">
+                            <span>OpenArt</span>
+                            <span>ChatGPT</span>
+                            <span>Gemini</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>VersaVogue</h3>
+                    <p>A fashion startup company made using LLM's with a planned investor pitch, marketing and branding strategy.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">
+                            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Demo
+                        </a>
+                        <a href="https://github.com/meyamaria/projectfolder/tree/main/meya%20maria%20tony%20project/versavogue%20web" target="_blank" class="project-link">
+                            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="./assets/health.png" alt="Health Reminder Web" data-hover="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80">
+                    <div class="project-overlay">
+                        <div class="project-tech-stack">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>Flask</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Daily Health Reminder Web</h3>
+                    <p>A responsive web application that sends daily health reminders and tracks user wellness activities.</p>
+                    <p>Consider hydration, stretch, sleep, and shut_eye notification</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">
+                            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/meyamaria/remainder-web.git" target="_blank" class="project-link">
+                            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-image">
+                    <img style="height: 380px;" src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tom & Jerry Classifier" data-hover="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80">
+                    <div class="project-overlay">
+                        <div class="project-tech-stack">
+                            <span>TensorFlow</span>
+                            <span>CNN</span>
+                            <span>OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Tom & Jerry Classifier</h3>
+                    <p>Trained a CNN model to classify cartoon frames into Tom, Jerry, or Other.
+                         A fun dive into computer vision using everyone's favorite cat-and-mouse duo.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">
+                            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="#" target="_blank" class="project-link">
+                            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Loan Prediction Model" data-hover="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80">
+                    <div class="project-overlay">
+                        <div class="project-tech-stack">
+                            <span>SVM</span>
+                            <span>GridSearchCV</span>
+                            <span>Seaborn</span>
+                            <span>Pandas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Loan Prediction Model</h3>
+                    <p>Classifies loan approvals using optimized SVM models.
+                        Built with proper preprocessing, EDA, evaluation metrics like ROC, precision, recall, etc.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">
+                            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="#" target="_blank" class="project-link">
+                            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Happy Birthday Website" data-hover="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80">
+                    <div class="project-overlay">
+                        <div class="project-tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Happy Birthday Website</h3>
+                    <p>Created a fun and interactive birthday website using HTML, CSS, and JavaScript.
+                         A delightful project showcasing web development skills.</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">
+                            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/meyamaria/happybday.git" target="_blank" class="project-link">
+                            <svg class="project-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🎨 UI/UX PROJECTS -->
+        <div class="project-item uiux" style="display:none;">
+            <div class="project-image">
+                <img src="assets/figma1.png" alt="Figma Project Example">
+                <div class="project-overlay">
+                    <div class="project-tech-stack">
+                        <span>Figma</span>
+                        <span>Prototype</span>
+                        <span>UI/UX</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>Travel App UI</h3>
+                <p>A Figma prototype for a solo-travel planning app with an intuitive and joyful design theme.</p>
+                <div class="project-links">
+                    <a href="https://www.figma.com/file/xxxx" target="_blank" class="project-link">View Prototype</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p>I'm always interested in hearing about new projects and opportunities.</p>
+                <div class="social-links">
+                    <a href="tel:8075018307" class="social-link">Phone</a>
+                    <a href="mailto:meyatony27@gmail.com" class="social-link">Email</a>
+                    <a href="https://github.com/meyamaria" class="social-link">GitHub</a>
+                    <a href="https://linkedin.com/in/meya-maria-tony" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

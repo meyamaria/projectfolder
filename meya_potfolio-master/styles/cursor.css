@@ -1,0 +1,36 @@
+/* Custom Cursor Styles */
+#custom-cursor {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #93c5fd, #bfdbfe);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    mix-blend-mode: difference;
+    box-shadow: 0 0 15px rgba(147, 197, 253, 0.6);
+}
+
+#custom-cursor.hover {
+    transform: scale(1.5);
+    background: linear-gradient(45deg, #bfdbfe, #dbeafe);
+}
+
+#custom-cursor.click {
+    transform: scale(0.8);
+}
+
+/* Hide default cursor */
+* {
+    cursor: none !important;
+}
+
+/* Special cursor states */
+a:hover ~ #custom-cursor,
+button:hover ~ #custom-cursor,
+.clickable:hover ~ #custom-cursor {
+    transform: scale(1.8);
+    background: linear-gradient(45deg, #bfdbfe, #dbeafe);
+    box-shadow: 0 0 25px rgba(147, 197, 253, 0.8);
+}
